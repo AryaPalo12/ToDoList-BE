@@ -1,5 +1,4 @@
 const express = require('express');
-const cors = require('cors');
 const app = express();
 const authRouter = require("./src/auth/auth.router");
 const userRouter = require("./src/user/user.router");
@@ -10,8 +9,6 @@ app.use(function(req, res, next) {
     res.setHeader("Access-Control-Allow-Origin", "*");
     next();
   });
-
-  app.use(cors());
 
 app.use(express.json());
 
