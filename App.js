@@ -7,18 +7,12 @@ const listRouter = require("./src/list/list.router");
 const port = process.env.PORT || 4000;
 const cors = require('cors')
 
-app.use(
-    cors({origin: ['*']})
-  );
+app.use(cors());
 
 app.use(express.json());
 
 app.get('/', (req,res)=>{
     res.send('Hello World');
-})
-
-app.get('/test', (req,res)=>{
-    res.json('Works');
 })
 
 app.use(userRouter);
