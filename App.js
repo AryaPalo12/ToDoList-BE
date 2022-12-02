@@ -4,7 +4,7 @@ const cors = require('cors');
 const authRouter = require("./src/auth/auth.router");
 const userRouter = require("./src/user/user.router");
 const listRouter = require("./src/list/list.router");
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(express.json());
 app.use(cors());
