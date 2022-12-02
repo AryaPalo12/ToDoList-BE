@@ -6,13 +6,12 @@ const userRouter = require("./src/user/user.router");
 const listRouter = require("./src/list/list.router");
 const port = process.env.PORT || 4000;
 
-
-app.use(cors());
-
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     next();
   });
+
+  app.use(cors());
 
 app.use(express.json());
 
