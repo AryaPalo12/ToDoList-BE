@@ -6,7 +6,8 @@ const listRouter = require("./src/list/list.router");
 const port = process.env.PORT || 4000;
 
 app.use(function(req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.append("Access-Control-Allow-Origin", "*");
+    res.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
     next();
   });
 
