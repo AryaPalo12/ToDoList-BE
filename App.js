@@ -4,12 +4,11 @@ const authRouter = require("./src/auth/auth.router");
 const userRouter = require("./src/user/user.router");
 const listRouter = require("./src/list/list.router");
 const port = process.env.PORT || 4000;
+const cors = require('cors')
 
-app.use(function(req, res, next) {
-    res.append("Access-Control-Allow-Origin", "*");
-    res.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
-    next();
-  });
+app.use(
+    cors({origin: ['*']})
+  );
 
 app.use(express.json());
 
