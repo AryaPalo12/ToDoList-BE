@@ -1,10 +1,9 @@
 require('dotenv').config();
 module.exports = {
   "development": {
-    "username": process.env.DB_USER,
     "password": process.env.DB_PASS,
     "database": process.env.DB_NAME,
-    "host": "postgres://iwmjxitl:CpMoygXyjUi77Ar292vCTNX5OmtdNLZy@babar.db.elephantsql.com/iwmjxitl",
+    "host": "babar.db.elephantsql.com",
     "port": "5432",
     "dialect": "postgresql"
   },
@@ -12,7 +11,7 @@ module.exports = {
     "username": process.env.DB_USER,
     "password": process.env.DB_PASS,
     "database": process.env.DB_NAME,
-    "host": "postgres://iwmjxitl:CpMoygXyjUi77Ar292vCTNX5OmtdNLZy@babar.db.elephantsql.com/iwmjxitl",
+    "host": "babar.db.elephantsql.com",
     "port": "5432",
     "dialect": "postgresql"
   },
@@ -20,7 +19,7 @@ module.exports = {
     "username": process.env.DB_USER,
     "password": process.env.DB_PASS,
     "database": process.env.DB_NAME,
-    "host": "postgres://iwmjxitl:CpMoygXyjUi77Ar292vCTNX5OmtdNLZy@babar.db.elephantsql.com/iwmjxitl",
+    "host": "babar.db.elephantsql.com",
     "port": "5432",
     "dialect": "postgresql"
   }
