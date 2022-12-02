@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 const bcrypt = require('bcrypt');
 const authRepo = require('./auth.repo');
 const jwt = require('jsonwebtoken');
@@ -19,7 +19,7 @@ const emailLogin = async({number, password}) => {
             const token = await jwt.sign({
                 id: userData.id,
                 number: userData.number,
-            }, 'NOINWI16516516d5f16s51f5ONRW',
+            }, process.env.SECRET_TOKEN,
             {expiresIn: '1d'}
             );
             return {
