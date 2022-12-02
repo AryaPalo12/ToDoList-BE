@@ -3,7 +3,7 @@ module.exports = {
   "development": {
     "password": process.env.DB_PASS,
     "database": process.env.DB_NAME,
-    "host": "babar.db.elephantsql.com",
+    "host": process.env.DB_HOST,
     "port": "5432",
     "dialect": "postgresql"
   },
